@@ -1,7 +1,8 @@
 import './App.scss';
+import EditorPage from "@/cv/editor/page";
 
 function App(): JSX.Element {
-	return <h1>Hello world</h1>;
+	return <EditorPage />
 }
 
 export default App;

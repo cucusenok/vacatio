@@ -23,8 +23,32 @@
 		"test:coverage": "jest --coverage"
 	},
 	"dependencies": {
+		"@dnd-kit/core": "^6.3.1",
+		"@dnd-kit/sortable": "^10.0.0",
+		"@dnd-kit/utilities": "^3.2.2",
+		"@tanstack/react-query": "^5.62.7",
+		"@trpc/client": "^11.0.0-rc.446",
+		"@trpc/react-query": "^11.0.0-rc.446",
+		"@trpc/server": "^11.0.0-rc.446",
+		"classnames": "^2.5.1",
+		"framer-motion": "^11.13.5",
+		"html2canvas": "^1.4.1",
+		"jspdf": "^2.5.2",
+		"lodash-es": "^4.17.21",
+		"next": "^15.1.0",
+		"pusher-js": "^8.4.0-rc2",
+		"radix-ui": "^1.0.1",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"react-hook-form": "^7.54.0",
+		"react-icons": "^5.4.0",
+		"react-resizable-panels": "^2.1.7",
+		"react-tooltip": "^5.28.0",
+		"sonner": "^1.7.1",
+		"superjson": "^2.2.2",
+		"uuid": "^11.0.3",
+		"vite-tsconfig-paths": "^5.1.4",
+		"zustand": "^5.0.2"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.20.7",
