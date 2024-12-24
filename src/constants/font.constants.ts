@@ -21,7 +21,7 @@ export const dancingScript = Dancing_Script({
 */
 
 export const fonts = {
-/*	rubik: {
+	/*	rubik: {
 		label: 'Rubik',
 		font: rubik
 	},*/
