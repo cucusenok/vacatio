@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { startCase } from "lodash-es";
 import { images } from "@/constants/images.constants";
 import { GLASSDOOR_JOB_SEARCH_URL, LINKEDIN_JOB_SEARCH_URL } from "@/constants/routes.constants";
@@ -55,7 +54,7 @@ const JobSearchSection = () => {
           className="with-icon accent-2 w-full px-4 py-1 text-xs"
           newTab
         >
-          <Image src={images.jobBoards.linkedin} alt="LinkedIn" width={16} height={16} />
+          <img src={images.jobBoards.linkedin} alt="LinkedIn" width={16} height={16} />
           LinkedIn
         </Link>
         <Link
@@ -63,7 +62,7 @@ const JobSearchSection = () => {
           className="with-icon accent-2 w-full px-4 py-1 text-xs"
           newTab
         >
-          <Image src={images.jobBoards.glassdoor} alt="Glassdoor" width={16} height={22} />
+          <img src={images.jobBoards.glassdoor} alt="Glassdoor" width={16} height={22} />
           Glassdoor
         </Link>
       </div>

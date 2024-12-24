@@ -36,7 +36,7 @@ export const FontPicker = () => {
               {
                 "bg-accent-400": font === currentFont,
               },
-              getFont(font),
+              /*getFont(font),*/
             )}
             onClick={() => setFont(font)}
           >

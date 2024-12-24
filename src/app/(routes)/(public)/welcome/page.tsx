@@ -1,5 +1,4 @@
-import { Dancing_Script } from "next/font/google";
-import Image from "next/image";
+//import { Dancing_Script } from "next/font/google";
 import { FaCreditCard, FaGoogle } from "react-icons/fa";
 import { cn } from "@/helpers/object.helpers";
 import { SignInButton } from "@/app/components/sign-in-button";
@@ -7,10 +6,10 @@ import { images } from "@/constants/images.constants";
 import { publicRoutes } from "@/constants/routes.constants";
 import { Link } from "@/ui";
 
-const dancingScript = Dancing_Script({
+/*const dancingScript = Dancing_Script({
   subsets: ["latin"],
   display: "swap",
-});
+});*/
 
 const Navigation = () => {
   return (
@@ -55,19 +54,18 @@ const Illustration = (props: { className?: string; size: number }) => {
     <div className={cn("relative", className)}>
       <span
         className={cn(
-          dancingScript.className,
+          //dancingScript.className,
           "absolute left-[-50px] top-[-15%] -rotate-12 text-hero font-bold",
         )}
       >
         And it&apos;s 100% free
       </span>
-      <Image
+      <img
         src={images.illustrations.writing}
         alt="writing"
         width={size}
         height={size}
         draggable={false}
-        priority
       />
     </div>
   );

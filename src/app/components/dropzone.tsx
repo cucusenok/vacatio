@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useRef, useState } from "react";
 import { ImFilePdf } from "react-icons/im";
 import { SiMicrosoftword } from "react-icons/si";
@@ -47,7 +46,7 @@ export const Dropzone = () => {
       role="region"
       aria-label="Drop zone for resume upload"
     >
-      <Image
+      <img
         src={images.illustrations.archiveFiles}
         alt="Upload your resume"
         height={200}

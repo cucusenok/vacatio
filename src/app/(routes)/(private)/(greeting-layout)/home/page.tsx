@@ -10,9 +10,10 @@ export const metadata: Metadata = {
   title: "Your home — Vocatio",
 };
 
-const HomeCv = async () => {
-  const user = await api.user.get({ with: UserRelationsPicker });
-  return <AutosaveForm user={user} />;
+const HomeCv = () => {
+  //const user = await api.user.get({ with: UserRelationsPicker });
+  return null
+  //return <AutosaveForm user={user} />;
 };
 
 const HomePage = () => {

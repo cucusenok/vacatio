@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { images } from "@/constants/images.constants";
 import { VOCATIO_CHROME_EXTENSION_URL } from "@/constants/routes.constants";
 import {
@@ -39,7 +38,7 @@ const InstallExtensionArea = () => {
           Install
         </Link>
       </div>
-      <Image
+      <img
         src={images.illustrations.pointing}
         alt="Pointing"
         width={100}

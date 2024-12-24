@@ -1,6 +1,5 @@
 import { GoogleTagManager } from '@next/third-parties/google';
 import { type Metadata } from 'next';
-import { TRPCReactProvider } from '@/trpc/react';
 import { Toaster } from '@/ui';
 import './styles/globals.css';
 
@@ -18,7 +17,7 @@ const RootLayout = (props: LayoutProps) => {
 		<html lang="en">
 			<GoogleTagManager gtmId={GA_ID} />
 			<body className="light flex min-h-[100dvh] flex-col scroll-smooth bg-body tracking-tight text-body antialiased">
-				<TRPCReactProvider>{children}</TRPCReactProvider>
+				{children}
 				<Toaster />
 			</body>
 		</html>

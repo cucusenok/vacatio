@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { api } from "@/trpc/react";
 import type { CvExperienceEntry } from "@/types/cv.types";
 import { getOriginalEntryByDerivedFromExperienceId } from "@/helpers/user.helpers";
@@ -26,7 +25,7 @@ export const UserBulletPointPicker = (props: { onClick: (bulletPoint: string) =>
     <section>
       <h3 className="with-icon font-semibold text-accent-500">
         {user.image && (
-          <Image
+          <img
             src={user.image}
             alt={user.name!}
             width={20}

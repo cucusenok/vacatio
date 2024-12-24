@@ -1,15 +1,14 @@
 "use client";
 
-import Image, { type ImageProps } from "next/image";
 import { useState } from "react";
 import { cn } from "@/helpers/object.helpers";
 
-export const BlurImage = (props: ImageProps) => {
+export const BlurImage = (props: any) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
     <div className="aspect-w-1 aspect-h-1 xl:aspect-w-7 xl:aspect-h-8 w-full overflow-hidden rounded-lg bg-gray-200">
-      <Image
+      <img
         {...props}
         fill
         objectFit="cover"

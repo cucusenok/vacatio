@@ -1,6 +1,6 @@
 "use client";
 
-import { type PropsWithChildren, createContext, use, useRef } from "react";
+import {type PropsWithChildren, createContext, useRef, useContext} from "react";
 import { useStore } from "zustand";
 import {
   type DataStore,
@@ -24,7 +24,7 @@ export const DataProvider = (props: PropsWithChildren<Record<string, unknown>>) 
 };
 
 export const useDataContext = <T,>(selector: (store: DataStore) => T): T => {
-  const context = use(InstanceContext);
+  const context = useContext(InstanceContext);
   if (!context) throw new Error("Editor context not found");
 
   return useStore(context, selector);

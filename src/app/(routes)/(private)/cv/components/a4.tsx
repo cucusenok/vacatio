@@ -24,7 +24,7 @@ const Cv = () => {
   return (
     <div
       ref={a4Ref}
-      className={cn("a4", template.layout, getFont(template.font))}
+      className={cn("a4", template.layout, /*getFont(template.font)*/)}
       style={{
         height: A4_HEIGHT * pages,
         width: A4_WIDTH,

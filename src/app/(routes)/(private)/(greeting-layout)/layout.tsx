@@ -3,10 +3,10 @@ import { CreateCvModal } from "@/app/components/modals/create-cv";
 import { MainNavigation } from "@/app/components/main-navigation";
 import { api } from "@/trpc/server";
 
-const Username = async () => {
-  const user = await api.user.get({ columns: { name: true } });
-  const name = user?.name?.split(" ")[0] ?? user?.name;
-
+const Username = () => {
+/*  const user = await api.user.get({ columns: { name: true } });
+  const name = user?.name?.split(" ")[0] ?? user?.name;*/
+  const name = "username"
   return <span className="appear-animation text-center">&#44;&nbsp;{name}</span>;
 };
 

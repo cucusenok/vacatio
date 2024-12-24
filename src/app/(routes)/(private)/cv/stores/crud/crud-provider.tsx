@@ -1,6 +1,6 @@
 "use client";
 
-import { type PropsWithChildren, createContext, use, useRef } from "react";
+import {type PropsWithChildren, createContext, useRef, useContext} from "react";
 import { useStore } from "zustand";
 import { type CrudInstanceInput, type Store, createCrudInstance } from "./crud-store";
 
@@ -22,7 +22,7 @@ export const CrudProvider = (props: CrudProviderProps) => {
 };
 
 export const useCrudInstance = <T,>(selector: (store: Store) => T): T => {
-  const storeContext = use(StoreContext);
+  const storeContext = useContext(StoreContext);
   if (!storeContext) throw new Error("Store context not found");
 
   return useStore(storeContext, selector);

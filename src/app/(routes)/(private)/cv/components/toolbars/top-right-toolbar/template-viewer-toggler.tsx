@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { cn } from "@/helpers/object.helpers";
 import { useTemplate } from "@/cv/stores/use-template";
 import { useViewers } from "@/cv/stores/use-viewers";
@@ -17,7 +16,7 @@ export const TemplateViewerToggler = () => {
       title="Select a template"
       aria-label="Select a template"
     >
-      <Image
+      <img
         src={template.thumbnail}
         alt={template.name}
         width={20}

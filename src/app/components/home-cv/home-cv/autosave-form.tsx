@@ -1,6 +1,5 @@
 "use client";
 
-import { api } from "@/trpc/react";
 import { useCallback, useEffect, useRef } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { pick } from "lodash-es";
@@ -19,7 +18,6 @@ import { Username } from "./home-username";
 export const AutosaveForm = (props: { user: UserWithRelations }) => {
   const { user } = props;
 
-  const { mutate, isPending } = api.user.replace.useMutation();
   const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const methods = useForm({
@@ -35,7 +33,7 @@ export const AutosaveForm = (props: { user: UserWithRelations }) => {
     }
 
     const updated = pick(data, dirty);
-    mutate(updated);
+    //mutate(updated);
     debounceTimerRef.current = null;
     clearDirty();
   };
@@ -83,7 +81,7 @@ export const AutosaveForm = (props: { user: UserWithRelations }) => {
       <form
         className={cn(
           "flex min-h-a4 w-full max-w-a4 flex-col gap-3 rounded border bg-accent-700 p-11 text-md text-accent-500 shadow-elevation",
-          getFont("rubik"),
+   /*       getFont("rubik"),*/
         )}
         onChange={methods.handleSubmit(debouncedUpdate)}
         onSubmit={methods.handleSubmit(debouncedUpdate)} // Handles deletion.

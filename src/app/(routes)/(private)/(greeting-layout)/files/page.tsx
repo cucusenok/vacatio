@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { type RouterOutputs } from "@/trpc/react";
 import {
   Accordion,
@@ -84,7 +83,7 @@ const Content = (props: { cv: RouterOutputs["cv"]["getRecent"][number] }) => {
           <p className="text-secondary">{cv.jobTitle}</p>
         </div>
         {cv.image && (
-          <Image
+          <img
             src={cv.image}
             alt="user image"
             height={100}
@@ -119,8 +118,9 @@ const Content = (props: { cv: RouterOutputs["cv"]["getRecent"][number] }) => {
   );
 };
 
-const Grid = async () => {
-  const cvs = await api.cv.getRecent();
+const Grid = () => {
+  //const cvs = await api.cv.getRecent();
+  const cvs = []
 
   if (!cvs || cvs.length === 0)
     return (

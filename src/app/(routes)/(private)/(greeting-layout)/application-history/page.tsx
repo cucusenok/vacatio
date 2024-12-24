@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Suspense } from "react";
 import type { Vacancy } from "@/types/vacancy.types";
 import { DataRow } from "@/app/components/data-row";
@@ -43,7 +42,7 @@ const Preview = (props: { vacancy: Vacancy }) => {
   return (
     <Card className="flex-y gap-4">
       {vacancy.image && (
-        <Image
+        <img
           src={vacancy.image}
           alt="Company logo"
           height={50}
@@ -98,9 +97,9 @@ const Content = (props: { vacancy: Vacancy }) => {
   );
 };
 
-const Grid = async () => {
-  const vacancies = await api.vacancy.getUserVacancies();
-
+const Grid = () => {
+  //const vacancies = await api.vacancy.getUserVacancies();
+  const vacancies = []
   /**
    * todo: 0 vacancies placeholder
    */

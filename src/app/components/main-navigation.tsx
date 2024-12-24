@@ -2,12 +2,12 @@ import { privateRoutes } from "@/constants/routes.constants";
 import { Badge } from "@/ui";
 import { NavigationLink } from "./navigation-link";
 
-const ApplicationsCount = async () => {
+const ApplicationsCount = () => {
   //const count = await api.vacancy.getTotalCountForUser();
   return <Badge className="danger sm">{10}</Badge>;
 };
 
-const FilesCount = async () => {
+const FilesCount = () => {
   //const count = await api.cv.getTotalCountForUser();
   return <Badge className="danger sm">10</Badge>;
 };

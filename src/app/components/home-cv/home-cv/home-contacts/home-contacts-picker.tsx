@@ -1,7 +1,7 @@
 "use client";
 
 import { api } from "@/trpc/react";
-import { createContext, use, useState } from "react";
+import {createContext, useContext, useState} from "react";
 import { useFieldArray, useFormContext } from "react-hook-form";
 import { FiLink } from "react-icons/fi";
 import { typedEntries } from "@/helpers/object.helpers";
@@ -33,7 +33,7 @@ type PickerContext = {
 const Context = createContext<PickerContext | null>(null);
 
 const PredefinedContact = () => {
-  const { input, setInput } = use(Context)!;
+  const { input, setInput } = useContext(Context)!;
   const { Icon, label } = ContactsWeWant[input!.name as keyof typeof ContactsWeWant];
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -57,7 +57,7 @@ const PredefinedContact = () => {
 };
 
 const CustomContact = () => {
-  const { input, setInput } = use(Context)!;
+  const { input, setInput } = useContext(Context)!;
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInput({ ...input!, name: e.target.value });

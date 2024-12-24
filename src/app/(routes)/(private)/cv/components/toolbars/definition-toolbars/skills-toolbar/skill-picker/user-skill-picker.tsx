@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { api } from "@/trpc/react";
 import { cn } from "@/helpers/object.helpers";
 import { isDuplicate } from "@/helpers/string.helpers";
@@ -27,7 +26,7 @@ export const UserSkills = (props: { onClick: (name: string, isUserSkill?: boolea
     <section className={cn("flex flex-col gap-2", skills.length > 18 && "border-b")}>
       <h3 className="flex-y gap-2 font-semibold">
         {user.image && (
-          <Image
+          <img
             src={user.image}
             alt={user.name!}
             width={20}

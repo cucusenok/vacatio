@@ -4,9 +4,10 @@ import { PusherInitializer } from "@/app/ws/pusher-initializer";
 import { PusherRedirector } from "@/app/ws/pusher-redirector";
 import { authOptions } from "@/server/auth";
 
-const PusherInstance = async () => {
-  const session = await getServerSession(authOptions);
-  const userId = session?.user.id;
+const PusherInstance = () => {
+  //const session = await getServerSession(authOptions);
+  //const userId = session?.user.id;
+  const userId = null;
   if (!userId) return null;
 
   return (

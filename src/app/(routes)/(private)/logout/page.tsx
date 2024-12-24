@@ -1,7 +1,6 @@
 "use client";
 
 import { signOut } from "next-auth/react";
-import Image from "next/image";
 import { useEffect } from "react";
 import { images } from "@/constants/images.constants";
 import { publicRoutes } from "@/constants/routes.constants";
@@ -20,7 +19,7 @@ const LogoutPage = () => {
   return (
     <main className="wrapper grow">
       <div className="flex-center flex-col">
-        <Image src={images.illustrations.timeToFly} alt="Time to fly" width={250} height={250} />
+        <img src={images.illustrations.timeToFly} alt="Time to fly" width={250} height={250} />
         <h1 className="flex-center gap-3 text-center text-headline-2 font-bold">
           <LogoLoader size="sm" />
           Logging you out...
